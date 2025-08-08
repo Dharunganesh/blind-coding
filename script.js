@@ -22,12 +22,12 @@ let timer = setInterval(() => {
 document.getElementById("submit").addEventListener("click", sendCode);
 
 async function sendCode() {
-    const language = document.getElementById("language").value;
+    const language = document.getElementById("language").value.toLowerCase();
     const code = document.getElementById("code").value;
     const stdin = document.getElementById("input").value;
 
     try {
-        const response = await fetch("https://3877f13c6e26.ngrok-free.app/run", {
+        const response = await fetch("http://localhost:3000/run", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ language, code, stdin })
@@ -50,6 +50,3 @@ codeArea.addEventListener("keydown", (e) => {
         sendCode();
     }
 });
-
-
-

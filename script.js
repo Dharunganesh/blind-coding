@@ -6,7 +6,7 @@ const codeArea = document.getElementById("code");
 let blindTime = 60; // seconds to keep hidden for test
 codeArea.style.color = "black";
 codeArea.style.backgroundColor = "black";
-caret-color: white;
+codeArea.style.caret-color: white;
 
 let timer = setInterval(() => {
     blindTime--;
@@ -51,5 +51,6 @@ codeArea.addEventListener("keydown", (e) => {
         sendCode();
     }
 });
+
 
 

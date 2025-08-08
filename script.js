@@ -3,9 +3,10 @@ document.getElementById("question").textContent =
     "Write a program to print the sum of two numbers.";
 
 const codeArea = document.getElementById("code");
-let blindTime = 10; // seconds to keep hidden for test
+let blindTime = 60; // seconds to keep hidden for test
 codeArea.style.color = "black";
 codeArea.style.backgroundColor = "black";
+caret-color: white;
 
 let timer = setInterval(() => {
     blindTime--;
@@ -50,4 +51,5 @@ codeArea.addEventListener("keydown", (e) => {
         sendCode();
     }
 });
+
 

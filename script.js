@@ -27,7 +27,7 @@ async function sendCode() {
     const stdin = document.getElementById("input").value;
 
     try {
-        const response = await fetch("https://be5d8c0513f1.ngrok-free.app/run", {
+        const response = await fetch("https://b5ccbbc8e436.ngrok-free.app/run", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ language, code, stdin })
@@ -50,4 +50,5 @@ codeArea.addEventListener("keydown", (e) => {
         sendCode();
     }
 });
+
 
